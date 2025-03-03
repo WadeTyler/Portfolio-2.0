@@ -9,7 +9,7 @@ const Contact = () => {
   const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
   const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
 
-  const form = useRef<HTMLFormElement>(null);
+  const form = useRef<HTMLFormElement | null>(null);
 
   const [isSending, setIsSending] = useState(false);
   const [sendSuccess, setSendSuccess] = useState(false);
@@ -23,6 +23,8 @@ const Contact = () => {
     setIsSending(true);
     setSendSuccess(false);
     setSendError(false);
+
+    if (form === null || form.current === null) return;
 
     emailjs.sendForm(serviceId, templateId, form.current, {
       publicKey: publicKey,
@@ -40,7 +42,7 @@ const Contact = () => {
           setSendError(true);
           console.log("FAILED TO SEND EMAIL: ", error.text);
         }
-      )
+      );
   }
 
   return (
@@ -79,21 +81,30 @@ const Contact = () => {
                name="email"/>
         <textarea className="bg-zinc-900 rounded w-full p-3 focus:outline-0 resize-none h-48" placeholder="Your Message"
                   name="message"></textarea>
-        <motion.button
+        <motion.div
+          className=""
           initial={{opacity: 0, y: 20}}
           whileInView={{opacity: 1, y: 0}}
           viewport={{once: true}}
           transition={{duration: 0.5, delay: 1.5}}
-          disabled={isSending}
-          className={`px-3 py-2 border text-accent hover:border-accent hover:text-white duration-300 ${isSending && 'bg-accentDark border-accentDark'}`}
         >
-          SUBMIT
-        </motion.button>
+          {isSending
+            ? <span className="loading loading-spinner loading-sm"></span>
+            : <button
+              disabled={isSending}
+              className={`px-3 py-2 border text-accent hover:border-accent hover:text-white duration-300`}
+            >
+              SUBMIT
+            </button>
+          }
+        </motion.div>
+
         {sendSuccess && (
-          <p>Message sent! I&#39;ll get back to you soon!</p>
+          <p className="text-center">Thanks for reaching out! I&#39;ll get back to you soon!</p>
         )}
         {sendError && (
-          <p className="text-red-500">Message failed to send.</p>
+          <p className="text-red-500 text-center">Message failed to send. Try again later or email directly at <strong
+            className="text-white">contact@tylerwade.net</strong></p>
         )}
 
       </motion.form>

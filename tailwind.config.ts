@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import daisyui from 'daisyui';
 
 import {default as flattenColorPalette} from "tailwindcss/lib/util/flattenColorPalette";
 
@@ -32,7 +32,7 @@ export default {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors, daisyui],
 } satisfies Config;
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).

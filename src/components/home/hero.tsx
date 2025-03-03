@@ -2,7 +2,7 @@
 import React from 'react';
 import {AuroraBackground} from "@/components/ui/aurora-background";
 import {motion} from 'framer-motion';
-import {IconArrowNarrowDown, IconCornerRightDownDouble} from "@tabler/icons-react";
+import {IconArrowNarrowDown} from "@tabler/icons-react";
 
 const Hero = () => {
 

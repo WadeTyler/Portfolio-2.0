@@ -39,7 +39,7 @@ const Projects = () => {
       }
     }
 
-  }, [currentTab, projectsList]);
+  }, [currentTab]);
 
   return (
     <div

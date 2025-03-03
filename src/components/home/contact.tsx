@@ -26,7 +26,9 @@ const Contact = () => {
 
     if (form === null || form.current === null) return;
 
-    emailjs.sendForm(serviceId, templateId, form.current, {
+    const formElement = form.current;
+
+    emailjs.sendForm(serviceId, templateId, formElement, {
       publicKey: publicKey,
     })
       .then(
@@ -34,7 +36,7 @@ const Contact = () => {
           setIsSending(false);
           setSendError(false);
           setSendSuccess(true);
-          form.current.reset();
+          formElement.reset();
         },
         (error) => {
           setIsSending(false);

@@ -128,11 +128,6 @@ function useIntersectionObserver(ref: React.RefObject<HTMLDivElement | null>, op
       observer.observe(ref.current);
     }
 
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
   }, [ref, options]);
 
   return isVisible;

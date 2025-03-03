@@ -1,0 +1,10 @@
+services:
+  portfolio:
+    build: ./
+    container_name: portfolio
+    environment:
+      NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${NEXT_PUBLIC_EMAILJS_PUBLIC_KEY}
+      NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: ${NEXT_PUBLIC_EMAILJS_TEMPLATE_ID}
+      NEXT_PUBLIC_EMAILJS_SERVICE_ID: ${NEXT_PUBLIC_EMAILJS_SERVICE_ID}
+    ports:
+      - "5021:5021"

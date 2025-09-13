@@ -25,7 +25,7 @@ const ExpertiseContainer = () => {
     <div
       className="relative flex flex-col items-center justify-center gap-16"
     >
-      <motion.p
+      <motion.h2
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         viewport={{once: true}}
@@ -33,7 +33,7 @@ const ExpertiseContainer = () => {
         className="lg:text-7xl text-5xl font-semibold text-foreground text-center z-30"
       >
         My Expertise
-      </motion.p>
+      </motion.h2>
       <div className="grid lg:grid-cols-3 max-w-[65rem] m-4 z-30">
         {expertises.map((expertise, index) => (
           <ExpertiseGrid expertise={expertise} key={index}/>
@@ -76,7 +76,7 @@ const ExpertiseGrid = ({expertise}: {
           className="flex items-center gap-4">
           <Image src={expertise.icon} alt={`Icon for ${expertise.title}`} width={48} height={48}
                  className="w-16 h-16"/>
-          <h2 className="text-2xl font-semibold w-full">{expertise.title}</h2>
+          <h3 className="text-2xl font-semibold w-full">{expertise.title}</h3>
         </motion.div>
 
         <motion.h3
@@ -147,7 +147,7 @@ const TechStack = () => {
 
   return (
     <div className="w-full h-full flex flex-col items-center">
-      <motion.h4
+      <motion.h3
         className="text-4xl font-semibold w-full text-center"
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
@@ -155,7 +155,7 @@ const TechStack = () => {
         transition={{duration: .5}}
       >
         Tech Stack
-      </motion.h4>
+      </motion.h3>
 
       <div
         className="relative flex max-h-[45rem] w-full items-center justify-center p-10"

@@ -19,6 +19,7 @@ export default {
       },
       animation: {
         aurora: "aurora 60s linear infinite",
+        'fade-in': 'fadeIn 1s ease-out forwards',
       },
       keyframes: {
         aurora: {
@@ -29,6 +30,10 @@ export default {
             backgroundPosition: "350% 50%, 350% 50%",
           },
         },
+        fadeIn: {
+          "0%": { opacity: '0' },
+          "100%": { opacity: '1' },
+        }
       },
     },
   },

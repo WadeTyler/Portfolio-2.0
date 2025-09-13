@@ -17,7 +17,6 @@ export default function Home() {
       <Education />
       <Contact />
       <Footer />
-
       <ScrollTopButton />
 
     </div>

@@ -9,22 +9,23 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Learn Norsk",
-    subtitle: "Norwegian Language Learning Application",
+    title: "Career Glyph",
+    subtitle: "All in one Platform for Career Management",
     techStack: [
-      "TypeScript",
-      "React",
       "Java",
       "Spring Boot",
-      "MySQL"
+      "TypeScript",
+      "React",
+      "AWS"
     ],
     images: [
-      "/projects/learn-norsk-1.png",
-      "/projects/learn-norsk-2.png"
+      "/projects/career-glyph-1.png",
+      "/projects/career-glyph-2.png",
+      "/projects/career-glyph-3.png",
+      "/projects/career-glyph-4.png",
     ],
-    description: `A modern web application designed to help users learn, practice, and master the Norwegian language. Built with TypeScript and Java, Learn Norsk provides an interactive platform for language learners at all levels.
-    \nEngaging lessons designed to cater to all learning styles, ensuring an effective grasp of Norwegian language fundamentals. Fun and challenging quizzes that reinforce your knowledge and track your progress as you learn Norwegian. Advanced tracking features to monitor your learning journey and celebrate milestones as you advance in your Norwegian skills.`,
-    link: "https://learnnorsk.tylerwade.net"
+    description: `Career Glyph is your all-in-one platform to track job applications, optimize your resume, and plan interviews. Land your dream job faster with powerful, AI-driven tools and a beautiful, intuitive interface. Career Glyph's Application Tracker helps you organize, monitor, and plan your job applications from wishlist to interview. Stay on top of your job hunt and never miss an opportunity. Career Glyph's Resume Scoring tool analyzes your resume against any job description. Get actionable, AI-powered feedback to optimize your resume and boost your chances of landing interviews. Career Glyph's Interview Planner helps you organize your interview schedule, so you can walk into every interview with confidence.`,
+    link: "https://careerglyph.com"
   },
   {
     title: "Guided Gospel",
@@ -45,6 +46,42 @@ export const projects: Project[] = [
     link: 'https://guidedgospel.net'
   },
   {
+    title: "Learn Norsk",
+    subtitle: "Norwegian Language Learning Application",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Java",
+      "Spring Boot",
+      "MySQL"
+    ],
+    images: [
+      "/projects/learn-norsk-1.png",
+      "/projects/learn-norsk-2.png"
+    ],
+    description: `A modern web application designed to help users learn, practice, and master the Norwegian language. Built with TypeScript and Java, Learn Norsk provides an interactive platform for language learners at all levels.
+    \nEngaging lessons designed to cater to all learning styles, ensuring an effective grasp of Norwegian language fundamentals. Fun and challenging quizzes that reinforce your knowledge and track your progress as you learn Norwegian. Advanced tracking features to monitor your learning journey and celebrate milestones as you advance in your Norwegian skills.`,
+    link: "https://github.com/WadeTyler/Learn-Norsk"
+  },
+  {
+    title: "Crypto Portfolio Tracker",
+    subtitle: "Track and Manage Your Crypto Investments",
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "TypeScript",
+      "React",
+    ],
+    images: [
+      "/projects/crypto-1.png",
+      "/projects/crypto-2.png",
+      "/projects/crypto-3.png",
+      "/projects/crypto-4.png",
+    ],
+    description: `Track your favorite cryptocurrencies and manage your portfolio with ease. Stay updated with real-time prices and market trends. This app allows users to view the latest prices and market data for various cryptocurrencies.`,
+    link: "https://crypto.tylerwade.net"
+  },
+  {
     title: "USHO Pro",
     subtitle: "Fast and Reliable URL Shortener",
     techStack: [
@@ -59,6 +96,6 @@ export const projects: Project[] = [
     ],
     description: `A fast, simple, and reliable URL shortening service built with TypeScript, Angular, and Spring Boot Java.
     \nConvert long URLs into short, memorable codes. Efficient URL validation and redirection system. Recent and Most used URLs are cached in memory for faster access.`,
-    link: "https://usho.pro"
+    link: "https://github.com/WadeTyler/URL-Shortener"
   },
 ]

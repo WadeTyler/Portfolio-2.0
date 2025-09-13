@@ -41,17 +41,17 @@ const WhatMakesMeDifferent = () => {
             transition={{duration: 0.5}}
             className="lg:gap-8 gap-4 flex flex-col"
           >
-            <h3 className="tracking-widest lg:text-base text-sm">Excels in creating responsive, user-friendly web
+            <p className="tracking-widest lg:text-base text-sm">Excels in creating responsive, user-friendly web
               applications, and brings a
               keen eye for detail and a passion for problem-solving to every project. Focused on delivering high-quality
-              results and efficient solutions that enhance user experience and drive business success.</h3>
+              results and efficient solutions that enhance user experience and drive business success.</p>
 
-            <h3 className="tracking-widest lg:text-base text-sm">
+            <p className="tracking-widest lg:text-base text-sm">
               Driven by curiosity and a love for problem-solving, constantly exploring new technologies to improve and
               innovate. Believes that great software is not just about code—it’s about crafting intuitive experiences
               that
               users love.
-            </h3>
+            </p>
           </motion.div>
 
 

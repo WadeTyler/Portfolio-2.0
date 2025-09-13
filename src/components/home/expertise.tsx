@@ -79,12 +79,12 @@ const ExpertiseGrid = ({expertise}: {
           <h3 className="text-2xl font-semibold w-full">{expertise.title}</h3>
         </motion.div>
 
-        <motion.h3
+        <motion.p
           initial={{opacity: 0, y: 20}}
           whileInView={{opacity: 1, y: 0}}
           viewport={{once: true}}
           transition={{duration: .5, delay: 1.5}}
-          className="tracking-widest ">{expertise.description}</motion.h3>
+          className="tracking-widest ">{expertise.description}</motion.p>
 
       </div>
     </motion.div>

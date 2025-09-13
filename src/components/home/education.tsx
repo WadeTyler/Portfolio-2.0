@@ -6,7 +6,7 @@ const Education = () => {
   return (
     <div className="w-full flex flex-col items-center lg:p-16 md:p-8 p-4 gap-8">
 
-      <motion.p
+      <motion.h2
         initial={{opacity: 0, y: 20}}
         whileInView={{opacity: 1, y: 0}}
         viewport={{once: true}}
@@ -14,7 +14,7 @@ const Education = () => {
         className="text-4xl font-semibold w-full text-center"
       >
         Education
-      </motion.p>
+      </motion.h2>
 
       <motion.div
         initial={{opacity: 0, y: 20}}

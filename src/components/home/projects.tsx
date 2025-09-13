@@ -45,7 +45,7 @@ const Projects = () => {
     <div
       className="relative w-full flex flex-col items-center justify-center overflow-hidden gap-16 lg:p-16 md:p-8 p-4">
       <div className="max-w-[80rem] w-full flex flex-col gap-12">
-        <motion.p
+        <motion.h2
           initial={{ opacity: 0}}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -53,7 +53,7 @@ const Projects = () => {
           className="lg:text-7xl text-5xl font-semibold text-foreground text-center z-30"
         >
           My Work
-        </motion.p>
+        </motion.h2>
 
         {/* Tabs */}
         <motion.div
@@ -170,12 +170,12 @@ const ProjectCard = ({project, setCurrentProject}: {
       {/* Image Container */}
       <div className="w-full h-64 relative overflow-hidden">
         <img src={project.images[0]} alt={`Thumbnail for ${project.title}`}
-             className="object-cover transition-transform duration-300 scale-125 group-hover:scale-150 w-full h-full" draggable={false}/>
+             className="object-cover transition-transform duration-300 scale-110 group-hover:scale-150 w-full h-full" draggable={false}/>
       </div>
       <div className="w-full h-32 p-4 relative">
-        <h4 className="mb-2 text-xl font-bold text-white transition-colors duration-300">
+        <h3 className="mb-2 text-xl font-bold text-white transition-colors duration-300">
           {project.title}
-        </h4>
+        </h3>
         <div className="relative h-fit">
           {!isHovered ? (
               <p
@@ -250,7 +250,7 @@ const ProjectPanel = ({project, setCurrentProject}: {
         {/* Image Container */}
         <div className="w-full h-[15rem] md:h-[25rem] relative overflow-hidden">
           <img src={project.images[currentImageIdx]} alt={`Thumbnail for ${project.title}`}
-               className="object-cover transition-transform duration-300 scale-125 group-hover:scale-150 w-full h-full" draggable={false}/>
+               className="object-cover transition-transform duration-300 scale-100 group-hover:scale-150 w-full h-full" draggable={false}/>
           {/* Next/Prev buttons */}
           <div className="absolute bottom-0 left-0 w-full flex justify-between">
             {currentImageIdx > 0 && (
@@ -271,8 +271,8 @@ const ProjectPanel = ({project, setCurrentProject}: {
 
         <div className="w-full h-fit md:p-8 p-4 flex flex-col relative gap-4">
           <div className="">
-            <h4 className="font-semibold text-4xl">{project.title}</h4>
-            <h5 className="text-lg text-zinc-400 font-semibold">{project.subtitle}</h5>
+            <h3 className="font-semibold text-4xl">{project.title}</h3>
+            <h4 className="text-lg text-zinc-400 font-semibold">{project.subtitle}</h4>
           </div>
           <p className="whitespace-pre-wrap text-sm">{project.description}</p>
           <div className="w-full flex items-center justify-between">

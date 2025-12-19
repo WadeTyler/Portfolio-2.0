@@ -26,19 +26,19 @@ const Education = () => {
         <div className="flex md:flex-row flex-col justify-between md:gap-12 w-full">
           <div className="">
             <h5 className="font-bold">University of Maryland, Global Campus</h5>
-            <h6 className="italic text-zinc-300">Bachelor in Computer Science; Minor in Web & Digital Design</h6>
+            <h6 className="italic text-foreground">Bachelor in Computer Science; Minor in Web & Digital Design</h6>
           </div>
 
-          <p className="italic text-zinc-600">Dec 2023 - Aug 2025</p>
+          <p className="italic text-foreground/80">Dec 2023 - Aug 2025</p>
         </div>
 
         <div className="flex md:flex-row flex-col justify-between md:gap-12 w-full">
           <div className="">
             <h5 className="font-bold">College of Southern Maryland</h5>
-            <h6 className="italic text-zinc-300">Associate in Computer Science</h6>
+            <h6 className="italic text-foreground">Associate in Computer Science</h6>
           </div>
 
-          <p className="italic text-zinc-600">Aug 2021 - Feb 2024</p>
+          <p className="italic text-foreground/80">Aug 2021 - Feb 2024</p>
         </div>
       </motion.div>
 

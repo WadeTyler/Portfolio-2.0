@@ -24,11 +24,11 @@ const Footer = () => {
         className="flex items-center justify-center gap-4"
       >
         <Link href={socials.linkedIn} target="_blank"
-              className="bg-zinc-800 p-4 flex items-center justify-center text-3xl hover:bg-accent duration-300 rounded-full">
+              className="bg-foreground text-background p-4 flex items-center justify-center text-3xl hover:bg-accent duration-300 rounded-full">
           <IconBrandLinkedinFilled className="size-6"/>
         </Link>
         <Link href={socials.gitHub} target="_blank"
-              className="bg-zinc-800 p-4 flex items-center justify-center text-3xl hover:bg-accent duration-300 rounded-full">
+              className="bg-foreground text-background p-4 flex items-center justify-center text-3xl hover:bg-accent duration-300 rounded-full">
           <IconBrandGithubFilled className="size-6"/>
         </Link>
       </motion.div>
@@ -38,9 +38,9 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0}}
         viewport={{ once: true }}
         transition={{ duration: .5, delay: 1.5}}
-        className="text-xs text-zinc-500"
+        className="text-xs"
       >
-        Tyler Wade
+        &copy; 2026 Tyler Wade. All Rights Reserved.
       </motion.p>
     </div>
   );

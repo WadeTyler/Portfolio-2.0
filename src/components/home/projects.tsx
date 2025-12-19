@@ -164,7 +164,7 @@ const ProjectCard = ({project, setCurrentProject}: {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="w-full group overflow-hidden rounded bg-zinc-800 shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer relative"
+      className="w-full group overflow-hidden rounded-xl bg-background text-foreground shadow-md shadow-foreground transition-all duration-300 hover:shadow-accent hover:shadow-lg cursor-pointer relative"
       onClick={() => setCurrentProject(project)}
     >
       {/* Image Container */}
@@ -173,13 +173,13 @@ const ProjectCard = ({project, setCurrentProject}: {
              className="object-cover transition-transform duration-300 scale-110 group-hover:scale-150 w-full h-full" draggable={false}/>
       </div>
       <div className="w-full h-32 p-4 relative">
-        <h3 className="mb-2 text-xl font-bold text-white transition-colors duration-300">
+        <h3 className="mb-2 text-xl font-bold transition-colors duration-300">
           {project.title}
         </h3>
         <div className="relative h-fit">
           {!isHovered ? (
               <p
-                className={`text-sm text-zinc-400 duration-300`}>
+                className={`text-sm duration-300`}>
                 {project.techStack.map((tech, index) => (
                   <span key={index}>
               {tech}
@@ -196,7 +196,7 @@ const ProjectCard = ({project, setCurrentProject}: {
                 animate={{y: 0, opacity: 1}}
                 exit={{y: 20, opacity: 0}}
                 transition={{duration: .3, delay: 0}}
-                className="w-fit text-sm text-zinc-400 duration-300 hover:text-accent relative p-2 border-zinc-700 border"
+                className="w-fit text-sm duration-300 hover:text-accent relative p-2 border-foreground/50 border"
               >
                 <p>Learn More</p>
                 <BorderBeam duration={3} size={20} initialOffset={25}/>
@@ -242,10 +242,10 @@ const ProjectPanel = ({project, setCurrentProject}: {
 
   return (
     <div
-      className="fixed w-full h-screen bg-[rgba(0,0,0,.6)] left-0 top-0 flex items-center justify-center z-40 lg:p-16 md:p-8 p-4">
+      className="fixed w-full h-screen bg-black/40 left-0 top-0 flex items-center justify-center z-40 lg:p-16 md:p-8 p-4">
 
       <div
-        className="max-w-[50rem] w-full min-h-[30rem] flex flex-col bg-zinc-800 shadow-xl rounded-lg overflow-hidden relative"
+        className="max-w-[50rem] w-full min-h-[30rem] flex flex-col bg-background text-foreground shadow-lg rounded-lg overflow-hidden relative"
       >
         {/* Image Container */}
         <div className="w-full h-[15rem] md:h-[25rem] relative overflow-hidden">
@@ -255,13 +255,13 @@ const ProjectPanel = ({project, setCurrentProject}: {
           <div className="absolute bottom-0 left-0 w-full flex justify-between">
             {currentImageIdx > 0 && (
               <button
-                className="bg-[rgba(0,0,0,.5)] p-2 md:p-4 flex items-center justify-between text-2xl md:text-5xl mr-auto select-none"
+                className="bg-black/50 text-white p-2 md:p-4 flex items-center justify-between text-2xl md:text-5xl mr-auto select-none"
                 onClick={handlePrev}>
                 &lt;
               </button>
             )}
             {currentImageIdx < project.images.length - 1 && (
-              <button className="bg-[rgba(0,0,0,.5)] p-4 flex items-center justify-between text-5xl ml-auto select-none"
+              <button className="bg-black/50 text-white p-4 flex items-center justify-between text-5xl ml-auto select-none"
                       onClick={handleNext}>
                 &gt;
               </button>
@@ -272,7 +272,7 @@ const ProjectPanel = ({project, setCurrentProject}: {
         <div className="w-full h-fit md:p-8 p-4 flex flex-col relative gap-4">
           <div className="">
             <h3 className="font-semibold text-4xl">{project.title}</h3>
-            <h4 className="text-lg text-zinc-400 font-semibold">{project.subtitle}</h4>
+            <h4 className="text-lg text-foreground/80 font-semibold">{project.subtitle}</h4>
           </div>
           <p className="whitespace-pre-wrap text-sm">{project.description}</p>
           <div className="w-full flex items-center justify-between">
@@ -282,7 +282,7 @@ const ProjectPanel = ({project, setCurrentProject}: {
                 <Link
                   href={project.link}
                   target="_blank"
-                  className="relative inline-flex gap-2 px-4 py-2  border-zinc-700 border w-fit hover:text-accent cursor-pointer duration-300"
+                  className="relative inline-flex gap-2 px-4 py-2  border-foreground/70 border w-fit hover:text-accent cursor-pointer duration-300"
                 >
                   <IconLink/> Live URL
                 </Link>

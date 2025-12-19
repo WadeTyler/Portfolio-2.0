@@ -48,7 +48,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-full flex flex-col items-center lg:p-16 md:p-8 p-4 gap-8 bg-zinc-800">
+    <div className="w-full flex flex-col items-center lg:p-16 md:p-8 p-4 gap-8 bg-background">
 
       <motion.p
         initial={{opacity: 0, y: 20}}
@@ -77,12 +77,18 @@ const Contact = () => {
         className="flex flex-col items-center max-w-[30rem] w-full gap-4"
         onSubmit={(e) => handleSubmit(e)}
       >
-        <input type="text" required className="bg-zinc-900 rounded w-full p-3 focus:outline-0" placeholder="Your Name"
+        <input type="text" required
+               className="border-foreground/90 border rounded w-full p-3 focus:outline-0 focus:border-accent duration-200"
+               placeholder="Your Name"
                name="name"/>
-        <input type="email" className="bg-zinc-900 rounded w-full p-3 focus:outline-0" placeholder="Your Email"
+        <input type="email"
+               className="border-foreground/90 border rounded w-full p-3 focus:outline-0 focus:border-accent duration-200"
+               placeholder="Your Email"
                name="email"/>
-        <textarea className="bg-zinc-900 rounded w-full p-3 focus:outline-0 resize-none h-48" placeholder="Your Message"
-                  name="message"></textarea>
+        <textarea
+          className="border-foreground/90 border rounded w-full p-3 focus:outline-0 focus:border-accent duration-200 resize-none h-48"
+          placeholder="Your Message"
+          name="message"></textarea>
         <motion.div
           className=""
           initial={{opacity: 0, y: 20}}
@@ -105,8 +111,8 @@ const Contact = () => {
           <p className="text-center">Thanks for reaching out! I&#39;ll get back to you soon!</p>
         )}
         {sendError && (
-          <p className="text-red-500 text-center">Message failed to send. Try again later or email directly at <strong
-            className="text-white">contact@tylerwade.net</strong></p>
+          <p className="text-red-500 text-center">Message failed to send. Try again later or email directly
+            at <strong className="text-accent">contact@tylerwade.net</strong></p>
         )}
 
       </motion.form>

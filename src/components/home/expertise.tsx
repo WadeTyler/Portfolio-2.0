@@ -52,7 +52,7 @@ const ExpertiseGrid = ({expertise}: {
       whileInView={{opacity: 1}}
       viewport={{once: true}}
       transition={{duration: 0.5}}
-      className="w-full h-full border-[rgba(255,255,255,.4)] border-2 lg:border-r-0 last:border-r-2 border-b-0 lg:border-b-2 last:border-b-2 p-4 flex"
+      className="w-full h-full border-foreground/50 border-2 lg:border-r-0 last:border-r-2 border-b-0 lg:border-b-2 last:border-b-2 p-4 flex"
     >
       <div
         className="flex flex-col gap-4"

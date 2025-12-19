@@ -242,7 +242,7 @@ const ProjectPanel = ({project, setCurrentProject}: {
 
   return (
     <div
-      className="fixed w-full h-screen bg-black/40 left-0 top-0 flex items-center justify-center z-40 lg:p-16 md:p-8 p-4">
+      className="fixed w-full h-screen bg-blacka40 left-0 top-0 flex items-center justify-center z-40 lg:p-16 md:p-8 p-4">
 
       <div
         className="max-w-[50rem] w-full min-h-[30rem] flex flex-col bg-background text-foreground shadow-lg rounded-lg overflow-hidden relative"
